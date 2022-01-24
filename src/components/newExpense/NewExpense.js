@@ -19,7 +19,7 @@ const NewExpense = (props) => {
     setFormVisible(true);
   };
 
-  const expenseHasBeenAdded = () => {
+  const cancelAddExpense = () => {
     setFormVisible(false);
   };
 
@@ -29,7 +29,7 @@ const NewExpense = (props) => {
       {formVisible && (
         <ExpenseForm
           onSaveExpenseData={saveExpenseData}
-          formVisible={formVisible}
+          onCancel={cancelAddExpense}
         />
       )}
     </div>
